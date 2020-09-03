@@ -1,0 +1,84 @@
+/* new posts */
+.main-container{
+    background-color: rgb(240, 240, 240);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+.new-posts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+    grid-template-areas: 
+    "new new new new"
+    "post1 post2 post3 post4"
+    ;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.new-posts h2{
+    grid-area: new;
+    text-align: center;
+    color: rgb(89, 112, 89);
+    font-style: italic;
+}
+
+.new-posts img{
+    width: 100%;
+}
+
+.post{
+    background-color: rgb(89, 112, 89);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post input{
+    width: 70px;
+    margin-top: 20px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 5px;
+}
+
+@media (max-width: 600px){
+    .main-container{
+        background-color: rgb(240, 240, 240);
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+
+    .new-posts{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr;
+        grid-template-areas: 
+        "new"
+        "post1"
+        ;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px){
+    .main-container{
+        background-color: rgb(240, 240, 240);
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+
+    .new-posts{
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+        grid-template-rows: 30px 1fr;
+        grid-template-areas: 
+        "new new"
+        "post1 post2"
+        ;
+        grid-gap: 20px;
+        padding: 20px;
+    }
+}
